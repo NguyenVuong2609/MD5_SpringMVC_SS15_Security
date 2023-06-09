@@ -27,7 +27,7 @@ public class JwtProvider {
                 .setSubject((userPrincipal.getUsername()))
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(new Date().getTime() + jwtExpiration * 1000))
-                .signWith(SignatureAlgorithm.HS512, jwtSecret)
+                .signWith(SignatureAlgorithm.HS512, jwtSecret) //! Chuẩn mã hóa !//
                 .compact();
     }
     //HÀM TIẾN HAH KIỂM TRA TÍNH HỢP LỆ CỦA TOKEN ĐANG ĐĂNG NHẬP
